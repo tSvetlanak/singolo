@@ -122,3 +122,45 @@ a {
     height: 600px;
     background-color: #f2f2f2;
 }
+
+.main .services .services__wrap {
+    display: flex;
+    flex-direction: column;
+}
+
+.main .services .services__wrap .services__wrap-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr 3fr);
+    grid-template-rows: 1fr 1fr;
+    grid-column-gap: 21px;
+    grid-row-gap: 40px;
+}
+
+.services__title h2 {
+    font-family: Lato, sans-serif;
+    font-size: 30px;
+    font-weight: 900;
+    color: #666d89;
+}
+
+.services__title p {
+    font-family: Lato, sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    color: #767e9e;
+}
+
+.services__item h3 {
+    margin: 0;
+    font-family: Lato, sans-serif;
+    font-size: 18px;
+    font-weight: 900;
+    color: #666d89;
+}
+
+.services__item p {
+    font-family: Lato, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: #767e9e;
+}
