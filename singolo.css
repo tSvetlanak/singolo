@@ -40,7 +40,7 @@ a {
 
 .header__wrap {
     padding: 0 40px;
-    height: 90px;
+    height: 96px;
     margin: 0 auto;
     width: 1020px;
     display: flex;
@@ -52,10 +52,12 @@ a {
 }
 
 .header__wrap .logo {
+    margin: 0;
     font-family: Lato, sans-serif;
     font-weight: 700;
     font-size: 25px;
     color: #ffffff;
+    line-height: 6.32px;
 }
 
 .header__wrap .logo span {
@@ -63,15 +65,20 @@ a {
 }
 
 .nav__list {
+    margin: 11px 0 0 0;
     display: flex;
     list-style-type: none;
 }
 
 .nav__list .a-item {
+    margin: 0;
     font-family: Lato, sans-serif;
     font-weight: 700;
     font-size: 12px;
+    letter-spacing: -0.6px;
+    line-height: 6.32px;
     color: #ffffff;
+    /* transform: translateY(50%); */
 }
 
 .nav__list .a-item:hover {
@@ -87,6 +94,7 @@ a {
 }
 
 .nav__list .dot {
+    margin-left: 13px;
     color: #494e62;
 }
 
@@ -105,21 +113,21 @@ a {
 
 .slider__imgvertical {
     margin: 52px 0 0 56px;
-    width: 240px;
-    height: 482px;
+    width: 243px;
+    height: 486px;
 }
 
 .slider__imghorizontal {
-    margin: 176px 54px 0 70px;
-    width: 482px;
-    height: 240px;
+    margin: 167px 55px 0 68px;
+    width: 489px;
+    height: 249px;
 }
 
 .main .services {
     padding: 0 40px;
     display: flex;
     width: 100%;
-    height: 600px;
+    height: auto;
     background-color: #f2f2f2;
 }
 
@@ -129,38 +137,63 @@ a {
 }
 
 .main .services .services__wrap .services__wrap-items {
+    margin: 44px 0 0 0;
     display: grid;
-    grid-template-columns: repeat(3, 1fr 3fr);
-    grid-template-rows: 1fr 1fr;
-    grid-column-gap: 21px;
-    grid-row-gap: 40px;
+    grid-template-columns: repeat(3, 62px 222px);
+    grid-template-rows: 137px 137px;
+    grid-column-gap: 17.8px;
+    grid-row-gap: 0px;
 }
 
 .services__title h2 {
+    margin: 69px 0 0 0;
     font-family: Lato, sans-serif;
     font-size: 30px;
     font-weight: 900;
+    line-height: 17.86px;
+    letter-spacing: -0.1px;
     color: #666d89;
 }
 
 .services__title p {
+    margin: 27px 0 0 0;
     font-family: Lato, sans-serif;
     font-size: 18px;
     font-weight: 300;
+    line-height: 30px;
+    letter-spacing: -0.19px;
+    word-spacing: 1.5px;
     color: #767e9e;
 }
 
+.services__img {
+    margin: 3px 0 0 0;
+}
+
 .services__item h3 {
-    margin: 0;
+    margin: 2px 0 0 1px;
     font-family: Lato, sans-serif;
     font-size: 18px;
     font-weight: 900;
+    line-height: 17.86px;
     color: #666d89;
 }
 
 .services__item p {
+    margin: 11px 0 0 0;
     font-family: Lato, sans-serif;
     font-size: 12px;
     font-weight: 400;
+    line-height: 21.56px;
+    word-spacing: 2px;
+    letter-spacing: -0.2px;
     color: #767e9e;
+}
+
+.secondRow {
+    margin-top: -11px;
+}
+
+.secondRowText {
+    margin-top: -13px;
 }
