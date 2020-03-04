@@ -70,6 +70,8 @@ h3 {
     font-weight: 300;
     color: #767e9e;
     line-height: 1.6;
+    letter-spacing: 0.2px;
+}
 }
 
 h4 {
@@ -96,29 +98,32 @@ p {
 }
 
 .portfolio .portfolio__wrap {
-    padding-bottom: 52px;
+         padding: 61px 0 47px 0;
 }
 
 .portfolio .portfolio__wrap h3 {
-    margin-bottom: 12px;
+        margin-bottom: 0;
 }
 
 
 /*Portfolio Menu*/
 
 .portfolio__wrap .portfolio-menu {
+    margin-top: 11px;
     padding-inline-start: 0;
     width: 100%;
     overflow: hidden;
     display: flex;
     flex-wrap: wrap;
     justify-content: left;
+    margin-left: 1px;
 }
 
 .portfolio__wrap .portfolio-menu li {
     margin: 0 10px 0 0;
     font-size: 12px;
     font-weight: 300;
+    letter-spacing: -0.05px;
 }
 
 .portfolio__wrap .portfolio-menu li a {
@@ -144,11 +149,11 @@ p {
 
 .portfolio__content {
     width: 100%;
-    padding: 19px 0 0 0;
+    padding: 0;
     display: grid;
     grid-template-columns: repeat(4, minmax(100px, 220px));
     grid-column-gap: 20px;
-    grid-row-gap: 15px;
+    grid-row-gap: 17px;
 }
 
 .portfolio__wrap ul.portfolio__content li a {
@@ -163,7 +168,7 @@ p {
 }
 
 .about__wrap {
-    padding: 66px 40px 0 40px;
+    padding: 59px 40px 0 40px;
     margin: 0 auto;
     width: 1020px;
     background: #f2f2f2;
@@ -172,7 +177,7 @@ p {
 }
 
 .about ul {
-    padding: 46px 0 0 0;
+    padding: 29px 0 0 0;
     display: flex;
     flex-direction: row;
 }
@@ -185,7 +190,9 @@ p {
 .about ul li figure {
     margin: 0;
 }
-
+.about ul li figure figcaption h4 {
+   padding: 0 0 11px 0px;
+}
 .about ul li:first-child {
     margin-left: 0;
 }
@@ -194,10 +201,11 @@ p {
 .about ul li h4,
 .about ul li p {
     display: block;
+    margin: -1px 0 0 0;
 }
 
 .about ul li img {
-    margin: 0 0 17px 0;
+       margin: 0 0 18px 0;
 }
 
 .about ul li p {
@@ -207,14 +215,17 @@ p {
 .about ul li a {
     display: block;
 }
+.about .about__socials{
+    padding-top:0 ;
+}
 
 .about .about__socials li:first-child {
     margin-left: 0;
 }
 
 .about .about__socials .socials__item {
-    width: 32px;
-    height: 32px;
+    width: 30px;
+    height: 30px;
     margin: 0 0 0 10px;
 }
 
