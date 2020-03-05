@@ -30,6 +30,16 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'fontello';
+    src: url('assets/fonts/fontello.eot?11696308');
+    src: url('assets/fonts/fontello.eot?11696308#iefix') format('embedded-opentype'), url('assets/fonts/fontello.woff?11696308') format('woff'), url('assets/fonts/fontello.ttf?11696308') format('truetype'), url('assets/fonts/fontello.svg?11696308#fontello') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
+    speak: none;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -86,11 +96,15 @@ p {
     color: #767e9e;
 }
 
-.header__wrap {
+.wrap {
     padding: 0 40px;
-    height: 96px;
     margin: 0 auto;
-    width: 1020px;
+    max-width: 1020px;
+    overflow: hidden;
+}
+
+.header__wrap {
+    height: 96px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -99,8 +113,13 @@ p {
     background-color: #2d303a;
 }
 
-.header__wrap .logo {
-    margin: 0;
+.logo {
+    width: 115px;
+    height: 20px;
+}
+
+.header__wrap .logo a {
+    margin: 5px 0 0px -1px;
     font-family: Lato, sans-serif;
     font-weight: 700;
     font-size: 25px;
@@ -108,29 +127,62 @@ p {
     line-height: 6.32px;
 }
 
-.header__wrap .logo span {
+.logo a {
+    display: block;
+    height: 100%;
+}
+
+.logo a span {
     color: #f06c64;
 }
 
+.logo:hover {
+    height: 20px;
+}
+
+
+/* ============================== */
+
+
+/* .nav li a {
+    color: #ffffff;
+   
+} */
+
 .nav__list {
-    margin: 11px 0 0 0;
+    margin: 4px 0 0 0;
     display: flex;
     list-style-type: none;
 }
 
-.nav__list .a-item {
+.nav__list li a {
     margin: 0;
+    display: inline-block;
     font-family: Lato, sans-serif;
     font-weight: 700;
     font-size: 12px;
     letter-spacing: -0.6px;
     line-height: 6.32px;
     color: #ffffff;
-    /* transform: translateY(50%); */
 }
 
-.nav__list .a-item:hover {
-    color: #f06c64;
+.nav__list li:before {
+    font-family: 'fontello';
+    content: "\e804";
+    margin-right: 13px;
+}
+
+.nav__list li:first-child:before {
+    font-family: 'fontello';
+    content: "";
+}
+
+.nav__list li:first-child a {
+    margin-left: 0px;
+}
+
+.nav__list li:last-child a {
+    margin-right: 0px;
 }
 
 .nav__list .item {
@@ -141,10 +193,16 @@ p {
     color: #f06c64;
 }
 
-.nav__list .dot {
-    margin-left: 13px;
-    color: #494e62;
+.nav__list a:hover {
+    color: #f06c64;
+    -o-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
 }
+
+
+/* ================================ */
 
 .main {
     margin: 0 auto;
@@ -159,21 +217,28 @@ p {
     background-color: #f06c64;
 }
 
+.slider__prev {
+    margin-bottom: 13px;
+}
+
+.slider__next {
+    margin-bottom: 13px;
+}
+
 .slider__imgvertical {
-    margin: 52px 0 0 56px;
+    margin: 51px 0 0 56px;
     width: 243px;
     height: 486px;
 }
 
 .slider__imghorizontal {
-    margin: 167px 55px 0 68px;
+    margin: 165px 55px 0 68px;
     width: 489px;
     height: 249px;
 }
 
 .main .services {
     border-bottom: 6px solid #ffffff;
-    padding: 0 40px;
     display: flex;
     width: 100%;
     height: auto;
@@ -197,11 +262,11 @@ p {
 .services__title h2 {
     margin: 69px 0 0 0;
     font-family: Lato, sans-serif;
-    font-size: 30px;
-    font-weight: 900;
+    /* font-size: 30px;
+    font-weight: 900; */
     line-height: 17.86px;
     letter-spacing: -0.1px;
-    color: #666d89;
+    /* color: #666d89; */
 }
 
 .services__title p {
@@ -216,11 +281,11 @@ p {
 }
 
 .services__img {
-    margin: 3px 0 0 0;
+    margin: 1px 0 0 0;
 }
 
 .services__item h3 {
-    margin: 2px 0 0 1px;
+    margin: 0 0 0 1px;
     font-family: Lato, sans-serif;
     font-size: 18px;
     font-weight: 900;
@@ -242,7 +307,7 @@ p {
 }
 
 .secondRow {
-    margin-top: -11px;
+    margin-top: -13px;
 }
 
 .secondRowText {
