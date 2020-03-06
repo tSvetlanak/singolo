@@ -5,34 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/normalize.css">
-    <link rel="stylesheet" href="singolo2.css">
+    <link rel="stylesheet" href="singolo3.css">
     <title>singolo3</title>
 </head>
 
 <body>
-    <div class="wrapper">
+    <!-- -------contact----- -->
+    <div class="contact__wrap wrap">
         <div class="contact">
             <h2>Get a Quote</h2>
             <h3>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</h3>
 
             <div class="form__wrapper">
+
                 <div class="form">
                     <form action="" method="get">
-
-                        <input name="Name" class="" type="text" value="Name (Required)" onfocus="if(this.value == 'Name (Required)') { this.value = ''; }" onblur="if(this.value == '') { this.value = 'Name (Required)'; }" />
-
-                        <input name="Email" class="" type="text" value="Email (Required)" onfocus="if(this.value == 'Email (Required)') { this.value = ''; }" onblur="if(this.value == '') { this.value = 'Email (Required)'; }" />
-
-                        <input name="Subject" class="" type="text" value="Subject" onfocus="if(this.value == 'Subject') { this.value = ''; }" onblur="if(this.value == '') { this.value = 'Subject'; }" />
-
-                        <textarea name="Detail" cols="" rows="" onfocus="if(this.value == 'Describe your project in detail...') { this.value = ''; }" onblur="if(this.value == '') { this.value = 'Describe your project in detail...'; }">Describe your project in detail...</textarea>
-
-                        <input type="submit" value="submit" name="subscribe" class="submitbtn" />
+                        <input name="Name" type="text" placeholder="Name (Required)" />
+                        <input name="Email" type="email" placeholder="Email (Required)" />
+                        <input name="Subject" type="text" placeholder="Subject" />
+                        <textarea name="Detail" cols="" rows="" placeholder="Describe your project in detail..."></textarea>
+                        <input type="submit" value="submit" name="submit" class="form__btn" />
 
                     </form>
                 </div>
 
-                <div class="conntact--information">
+                <div class="contact--inform">
                     <h4>Contact Information</h4>
                     <p>Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis.</p>
 
@@ -45,26 +42,37 @@
 
         </div>
     </div>
-    <!-- Footer
-		============================= -->
-    <footer class="footer">
-        <div class="footer__wrapper">
+    <!-- Footer -->
 
-            <p class="left">© Copyright 2013 by <a href="">PSDchat</a></p>
+    <div class="footer__wrapper wrap">
+        <footer class="footer">
+            <p>© Copyright 2013</p>
 
-            <ul>
-                <li>
-                    <a href=""><span class="icon-facebook"></span></a>
-                    <a href=""><span class="icon-gplus"></span></a>
-                    <a href=""><span class="icon-twitter"></span></a>
-                    <a href=""><span class="icon-linkedin"></span></a>
+            <ul class="footer__socials">
+                <li class="socials__item">
+                    <a aria-label="f" class="socials__link" href="#">
+                        <img class="socials__svg" src="assets/img/f.svg" alt="icon-facebook">
+                    </a>
+                </li>
+                <li class="socials__item">
+                    <a aria-label="g" class="socials__link" href="#">
+                        <img class="socials__svg" src="assets/img/g.svg" alt="icon-google">
+                    </a>
+
+                </li>
+                <li class="socials__item">
+                    <a aria-label="in" class="socials__link" href="#">
+                        <img class="socials__svg" src="assets/img/t.svg" alt="icon-twitter">
+                    </a>
+                </li>
+                <li class="socials__item">
+                    <a aria-label="t" class="socials__link" href="#">
+                        <img class="socials__svg" src="assets/img/in.svg" alt="icon-linkedin">
+                    </a>
                 </li>
             </ul>
-
-        </div>
-    </footer>
-
-    <a href="#" class="go-top">Top</a>
+        </footer>
+    </div>
 
 </body>
 
