@@ -196,7 +196,7 @@ p {
 }
 
 
-/* ================================ */
+/* ============Services==================== */
 
 .main {
     margin: 0 auto;
@@ -231,7 +231,7 @@ p {
     height: 249px;
 }
 
-.main .services {
+.main .services .services__wrap {
     border-bottom: 6px solid #ffffff;
     display: flex;
     width: 100%;
@@ -239,7 +239,7 @@ p {
     background-color: #f2f2f2;
 }
 
-.main .services .services__wrap {
+.main .services {
     display: flex;
     flex-direction: column;
 }
