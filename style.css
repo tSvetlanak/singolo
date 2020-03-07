@@ -200,7 +200,7 @@ p {
 }
 
 .nav__list li {
-    margin-left: 15px;
+    margin-left: 16px;
 }
 
 .nav__list .active {
@@ -277,7 +277,7 @@ p {
 }
 
 .services__title h2 {
-    margin: 69px 0 0 0;
+    margin: 68px 0 0 0;
     font-family: Lato, sans-serif;
     line-height: 17.86px;
     letter-spacing: -0.1px;
@@ -341,7 +341,7 @@ p {
 }
 
 .portfolio .portfolio__wrap {
-    padding: 61px 0 47px 0;
+    padding: 61px 0 45px 0;
 }
 
 .portfolio .portfolio__wrap h3 {
@@ -357,7 +357,7 @@ p {
     display: flex;
     flex-wrap: wrap;
     justify-content: left;
-    margin-left: 1px;
+    margin-left: 2px;
 }
 
 .portfolio__wrap .portfolio__menu li {
@@ -502,7 +502,7 @@ p {
 }
 
 .contact {
-    padding: 60px 0 0 0;
+    padding: 58px 0 0 0;
 }
 
 .contact h2,
@@ -515,7 +515,7 @@ p {
 
 .contact h3 {
     text-align: justify;
-    margin: -2px 3px 0 0px;
+    margin: 0px 3px 0 0px;
     font-family: Lato, sans-serif;
     font-size: 18px;
     font-weight: 300;
@@ -529,7 +529,7 @@ p {
     flex-direction: row;
     width: 100%;
     height: 481px;
-    padding: 45px 0 0 0px;
+    padding: 42px 0 0 0px;
 }
 
 .contact .form__wrapper .form {
@@ -628,14 +628,14 @@ textarea::placeholder {
 }
 
 .contact--inform h4 {
-    margin: -2px 0 9px -4px;
+    margin: 0px 0 9px -2px;
 }
 
 .contact--inform p {
-    margin: 0 0px 24px -4px;
+    margin: 6px 0 26px -4px;
     text-align: justify;
     line-height: 22px;
-    letter-spacing: -0.36px;
+    letter-spacing: -0.4px;
     word-spacing: 1.6px;
 }
 
@@ -643,26 +643,27 @@ textarea::placeholder {
     display: block;
     line-height: 12px;
     font-size: 12px;
-    margin: 6px 0 4px -3px;
-    padding: 1px 0 1px 3px;
+    margin: 7px 0 4px -1px;
+    padding: 0px 0 1px 3px;
 }
 
 .contact--inform .location {
-    margin: 6px 0 1px -4px;
+    margin: 7px 0 7px -4px;
 }
 
 .contact--inform .email {
     letter-spacing: -0.1px;
-    margin: 6px 0 1px -3px;
+    margin: 10px 0 1px -1px;
 }
 
 .contact--inform .tel {
-    margin: 6px 0 1px -2px;
+    margin: 0 0 2px 0;
+    padding: 2px 0 0 0;
 }
 
 .contact--inform span i {
     font-family: 'fontello';
-    margin: 0 11px 0px -3px;
+    margin: 0 11px 0 -3px;
     font-weight: normal;
     font-style: normal;
     vertical-align: text-bottom;
@@ -694,7 +695,7 @@ textarea::placeholder {
 .footer {
     display: flex;
     justify-content: space-between;
-    padding-top: 22px;
+    padding-top: 9px;
     padding-bottom: 22px;
 }
 
@@ -705,7 +706,7 @@ textarea::placeholder {
 .footer .footer__socials {
     display: flex;
     align-items: center;
-    margin: 2px -23px 0 0px;
+    margin: 3px -23px 0 0;
 }
 
 .footer .footer__socials .socials__item {
