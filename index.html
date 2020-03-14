@@ -14,10 +14,10 @@
 <body>
     <!--   ------------------------------header---------------------------- -->
     <header class="header">
-        <div class="header__wrap wrap">
+        <div class="header__wrap  wrap">
             <h1 class="logo"><a href=>SINGOLO<span>*</span></a></h1>
             <nav class="nav">
-                <ul class="nav__list">
+                <ul class="nav__list" id="menu">
                     <li class="current"><a class="active" href="#home">HOME</a></li>
                     <li> <a href="#services"> SERVICES</a></li>
                     <li><a href="#portfolio"> PORTFOLIO</a></li>
@@ -31,11 +31,17 @@
     <!-- ------------------------------------------------------- -->
     <main class="main">
         <!--  ----------------------slider------------------------------------- -->
-        <div id="home" class="slider wrap">
-            <img class="slider__prev" src="assets/img/chevprev.svg" alt="">
-            <img class="slider__imgvertical" src="assets/img/iPhone Vertical.png" alt="iphone">
-            <img class="slider__imghorizontal" src="assets/img/iPhone Horizontal.png" alt="iphone">
-            <img class="slider__next" src="assets/img/chevnext.svg" alt="">
+        <div id="home" class="slider  wrap">
+            <a id="chevprev" class="slider__prev" href="#"> <img src="assets/img/chevprev.svg" alt=""> </a>
+            <div id="blockvert" class="slider__imgvertical">
+                <img src="assets/img/iPhone Vertical.png" alt="iphone">
+                <img id="screenvertical" class="screenvertical" src="assets/img/phoneblackvertical.png" alt="">
+            </div>
+            <div id="blockhor" class="slider__imghorizontal">
+                <img src="assets/img/iPhone Horizontal.png" alt="iphone">
+                <img id="screenhorizontal" class="screenhorizontal" src="assets/img/phoneblackhorizontal.png" alt="">
+            </div>
+            <a id="chevnext" class="slider__next" href="#"> <img src="assets/img/chevnext.svg" alt=""></a>
         </div>
         <!-- --------------------------------------services--------------------------- -->
         <div class="services__wrap wrap">
@@ -89,7 +95,7 @@
                 <h3>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</h3>
 
                 <ul class="portfolio__menu">
-                    <li class="current"><a href="#">All</a></li>
+                    <li><a href="#">All</a></li>
                     <li><a href="#">Web Design</a></li>
                     <li><a href="#">Graphic Design</a></li>
                     <li><a href="#">Artwork</a></li>
@@ -286,25 +292,36 @@
                 <h3>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</h3>
 
                 <div class="form__wrapper">
-
                     <div class="form">
-                        <form action="" method="get">
-                            <input name="Name" type="text" placeholder="Name (Required)" required />
-                            <input name="Email" type="email" placeholder="Email (Required)" required />
-                            <input name="Subject" type="text" placeholder="Subject" />
-                            <textarea name="Detail" cols="" rows="" placeholder="Describe your project in detail..."></textarea>
-                            <input type="submit" value="submit" name="submit" class="form__btn" />
-
+                        <form action="">
+                            <input id="name" name="Name" type="text" placeholder="Name (Required)" required />
+                            <input id="email" name="Email" type="email" placeholder="Email (Required)" required />
+                            <input id="subject" name="Subject" type="text" placeholder="Subject" />
+                            <textarea id="description" name="Detail" cols="" rows="" placeholder="Describe your project in detail..."></textarea>
+                            <input id="btn" type="button" value="Submit" name="submit" class="form__btn" />
+                            <div id="message-block" class="hidden">
+                                <div id="message">
+                                    <p>Письмо отправлено</p>
+                                    <p>Name&emsp;<span id="resultname"></span></p>
+                                    <p>E-mail&emsp;<span id="resultemail"></span></p>
+                                    <p><span id="result"></span></p>
+                                    <p><span id="resultdescr"></span></p>
+                                    <br>
+                                    <button id="close-btn">OK</button>
+                                </div>
+                            </div>
                         </form>
+
                     </div>
+
 
                     <div class="contact--inform">
                         <h4>Contact Information</h4>
                         <p>Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis.</p>
 
                         <span class="location"><i class="li_location"></i>Elm St. 14/05 Lost City </span>
-                        <span class="tel"><i class="icon-phone"></i>03528 331 86 35 </span>
-                        <span class="email"><i class="icon-mail"></i>info@singolo.com</span>
+                        <span class="tel"><i class="icon-phone"></i> <a  href="tel:035283318635">03528 331 86 35</a> </span>
+                        <span class="email"><i class="icon-mail"></i> <a  href="mailto:info@singolo.com">info@singolo.com</a></span>
                     </div>
                 </div>
 
@@ -344,7 +361,7 @@
         </footer>
     </div>
 
-
+    <script src="script.js"></script>
 </body>
 
 </html>
