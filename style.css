@@ -124,21 +124,23 @@ p {
 .wrap {
     padding: 0 40px;
     margin: 0 auto;
-    max-width: 1020px;
+    width: 1020px;
     overflow: hidden;
 }
 
 .header {
+    margin: 0 auto;
+    width: 1020px;
     height: 96px;
     position: relative;
+    z-index: 2;
 }
 
 .header__wrap {
-    /*  top: 0;
-    left: 0;
-    width: 60%; */
-    /*   position: fixed; */
-    height: 100%;
+    padding: 0 40px;
+    position: fixed;
+    height: inherit;
+    width: inherit;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -425,7 +427,8 @@ li:not(.active):hover {
 .portfolio {
     padding: 0 40px;
     margin: 0 auto;
-    width: 1020px;
+    max-width: 1020px;
+    height: 869px;
     background: #2d303a;
     overflow: hidden;
     border-bottom: 6px solid #323746;
@@ -467,6 +470,13 @@ li:not(.active):hover {
     display: block;
 }
 
+.portfolio__wrap .portfolio__menu li a.active {
+    border-radius: 5px;
+    border: 1px solid #c5c5c5;
+    color: #dedede;
+    transition-duration: 0.5s;
+}
+
 .portfolio__wrap .portfolio__menu li a:hover,
 .portfolio__wrap .portfolio__menu li a:focus,
 .portfolio__wrap .portfolio__menu li.current a {
@@ -485,13 +495,27 @@ li:not(.active):hover {
     grid-row-gap: 17px;
 }
 
-.portfolio__wrap ul.portfolio__content li a {
-    height: 100%;
+.portfolio__wrap .portfolio__content img {
+    border: 5px solid #2d303a;
+    width: 220px;
+    height: 187px;
     display: block;
 }
 
-.portfolio__wrap ul.portfolio__content li a:hover {
-    outline: 2px solid #fff;
+.portfolio__wrap .portfolio__content .content__icon:nth-child(n+13) {
+    display: none;
+}
+
+.portfolio__wrap .portfolio__content img:hover {
+    border: 5px solid #F06C64;
+    cursor: pointer;
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+    transition-duration: 0.5s;
+}
+
+.portfolio__wrap .portfolio__content img.active {
+    border: 5px solid #F06C64;
     opacity: 0.6;
     filter: alpha(opacity=60);
     transition-duration: 0.5s;
@@ -587,6 +611,16 @@ li:not(.active):hover {
     border: 2px solid #f06c64;
     background-color: #f06c64;
     border-radius: 50%;
+}
+
+
+/* -------------------------------- */
+
+.anchor {
+    display: block;
+    position: relative;
+    top: -95px;
+    visibility: hidden;
 }
 
 .contact__wrap {
@@ -735,11 +769,6 @@ textarea::placeholder {
 
 .form #message-block.hidden {
     display: none;
-    transition: display 200ms ease-in;
-    /*  -o-transition-duration: 0.5s;
-    -moz-transition-duration: 0.5s;
-    -webkit-transition-duration: 0.5s; 
-    transition-duration: 5s;*/
 }
 
 .form #message {

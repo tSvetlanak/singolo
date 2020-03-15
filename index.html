@@ -14,7 +14,7 @@
 <body>
     <!--   ------------------------------header---------------------------- -->
     <header class="header">
-        <div class="header__wrap  wrap">
+        <div class="header__wrap">
             <h1 class="logo"><a href=>SINGOLO<span>*</span></a></h1>
             <nav class="nav">
                 <ul class="nav__list" id="menu">
@@ -29,9 +29,10 @@
         </div>
     </header>
     <!-- ------------------------------------------------------- -->
+    <div class="anchor" id="home"></div>
     <main class="main">
         <!--  ----------------------slider------------------------------------- -->
-        <div id="home" class="slider  wrap">
+        <div id="sliderwrap" class="slider  wrap">
             <a id="chevprev" class="slider__prev" href="#"> <img src="assets/img/chevprev.svg" alt=""> </a>
             <div id="blockvert" class="slider__imgvertical">
                 <img src="assets/img/iPhone Vertical.png" alt="iphone">
@@ -44,8 +45,9 @@
             <a id="chevnext" class="slider__next" href="#"> <img src="assets/img/chevnext.svg" alt=""></a>
         </div>
         <!-- --------------------------------------services--------------------------- -->
+        <div class="anchor" id="services"></div>
         <div class="services__wrap wrap">
-            <div id="services" class="services">
+            <div class="services">
                 <div class="services__title">
                     <h2> Our Services </h2>
                     <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit . Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
@@ -94,91 +96,31 @@
                 <h2>Portfolio</h2>
                 <h3>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</h3>
 
-                <ul class="portfolio__menu">
-                    <li><a href="#">All</a></li>
-                    <li><a href="#">Web Design</a></li>
-                    <li><a href="#">Graphic Design</a></li>
-                    <li><a href="#">Artwork</a></li>
+                <ul id="portfoliomenu" class="portfolio__menu">
+                    <li><a class="active" href="#portfolio">All</a></li>
+                    <li><a href="#portfolio">Web Design</a></li>
+                    <li><a href="#portfolio">Graphic Design</a></li>
+                    <li><a href="#portfolio">Artwork</a></li>
                 </ul>
-                <ul class="portfolio__content">
-
-                    <li>
-                        <a class="content__link" href="#">
-                            <img class="content__icon" src="assets/img/img1.jpg" width="220" height="187" alt="#" />
-                        </a>
-                    </li>
-
-                    <li>
-                        <a class="content__link" href="#">
-                            <img class="content__icon" src="assets/img/img2.jpg" width="220" height="187" alt="#" />
-                        </a>
-                    </li>
-
-                    <li>
-                        <a class="content__link" href="#">
-                            <img class="content__icon" src="assets/img/img3.jpg" width="220" height="187" alt="#" />
-                        </a>
-                    </li>
-
-                    <li>
-                        <a class="content__link" href="#">
-                            <img class="content__icon" src="assets/img/img4.jpg" width="220" height="187" alt="#" />
-                        </a>
-                    </li>
-
-                    <li>
-                        <a class="content__link" href="#">
-                            <img class="content__icon" src="assets/img/img5.jpg" width="220" height="187" alt="#" />
-                        </a>
-                    </li>
-
-                    <li>
-                        <a class="content__link" href="#">
-                            <img class="content__icon" src="assets/img/img6.jpg" width="220" height="187" alt="#" />
-                        </a>
-                    </li>
-
-                    <li data-id="id-7" data-type="webdesign">
-                        <a class="content__link" href="#">
-                            <img class="content__icon" src="assets/img/img7.jpg" width="220" height="187" alt="#" />
-                        </a>
-                    </li>
-
-                    <li>
-                        <a class="content__link" href="#">
-                            <img class="content__icon" src="assets/img/img8.jpg" width="220" height="187" alt="#" />
-                        </a>
-                    </li>
-
-                    <li>
-                        <a class="content__link" href="#">
-                            <img class="content__icon" src="assets/img/img9.jpg" width="220" height="187" alt="#" />
-                        </a>
-                    </li>
-
-                    <li>
-                        <a class="content__link" href="#">
-                            <img class="content__icon" src="assets/img/img10.jpg" width="220" height="187" alt="#" />
-                        </a>
-                    </li>
-
-                    <li>
-                        <a class="content__link" href="#">
-                            <img class="content__icon" src="assets/img/img11.jpg" width="220" height="187" alt="#" />
-                        </a>
-                    </li>
-
-                    <li>
-                        <a class="content__link" href="#">
-                            <img class="content__icon" src="assets/img/img12.jpg" width="220" height="187" alt="#" />
-                        </a>
-                    </li>
-
-                </ul>
+                <div id="portfoliocontent" class="portfolio__content">
+                    <img class="content__icon" src="assets/img/img1.jpg" alt="#" />
+                    <img class="content__icon" src="assets/img/img2.jpg" alt="#" />
+                    <img class="content__icon" src="assets/img/img3.jpg" alt="#" />
+                    <img class="content__icon" src="assets/img/img4.jpg" alt="#" />
+                    <img class="content__icon" src="assets/img/img5.jpg" alt="#" />
+                    <img class="content__icon" src="assets/img/img6.jpg" alt="#" />
+                    <img class="content__icon" src="assets/img/img7.jpg" alt="#" />
+                    <img class="content__icon" src="assets/img/img8.jpg" alt="#" />
+                    <img class="content__icon" src="assets/img/img9.jpg" alt="#" />
+                    <img class="content__icon" src="assets/img/img10.jpg" alt="#" />
+                    <img class="content__icon" src="assets/img/img11.jpg" alt="#" />
+                    <img class="content__icon" src="assets/img/img12.jpg" alt="#" />
+                </div>
             </div>
         </div>
         <!-- ------------------------about----------------- -->
-        <div id="about" class="about">
+        <div class="anchor" id="about"></div>
+        <div class="about">
             <div class="about__wrap">
                 <h2>About Us</h2>
                 <h3>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</h3>
@@ -286,8 +228,9 @@
             </div>
         </div>
         <!-- -------contact----- -->
+        <div class="anchor" id="contact"></div>
         <div class="contact__wrap wrap">
-            <div id="contact" class="contact">
+            <div class="contact">
                 <h2>Get a Quote</h2>
                 <h3>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</h3>
 
@@ -298,7 +241,7 @@
                             <input id="email" name="Email" type="email" placeholder="Email (Required)" required />
                             <input id="subject" name="Subject" type="text" placeholder="Subject" />
                             <textarea id="description" name="Detail" cols="" rows="" placeholder="Describe your project in detail..."></textarea>
-                            <input id="btn" type="button" value="Submit" name="submit" class="form__btn" />
+                            <input id="btn" type="submit" value="Submit" name="submit" class="form__btn" />
                             <div id="message-block" class="hidden">
                                 <div id="message">
                                     <p>Письмо отправлено</p>
