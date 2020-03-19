@@ -249,48 +249,70 @@ li:not(.active):hover {
 
 .main .slider {
     position: relative;
-    padding: 96px 40px;
-    display: flex;
     width: 100%;
     height: 600px;
+    align-items: center;
+    border-bottom: 6px solid #f48c8f;
+}
+
+.main .slider .carousel {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    align-items: center;
+}
+
+.main .slider .carousel .slider__content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    align-items: center;
+}
+
+.main .slider .carousel .slider__content .item {
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: relative;
+    animation: 0.5s ease-in-out;
+    margin: 0 auto;
+}
+
+.main .slider .carousel .slider__content .item.active,
+.main .slider .carousel .slider__content .item.next {
+    display: block;
+}
+
+.main .slider .carousel .slider__content .item.next {
+    position: absolute;
+    top: 0;
+}
+
+.main .slider .carousel .slider__content .item .numbwan {
+    display: flex;
     align-items: center;
     background-color: #f06c64;
-    border-bottom: 6px solid #f48c8f;
+    height: 100%;
 }
 
-.main .slider-two {
-    position: relative;
-    padding: 96px 40px;
-    display: flex;
-    width: 100%;
-    height: 600px;
-    align-items: center;
-    background: url(assets/img/Slider.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-bottom: 6px solid #f48c8f;
-}
-
-.slider-two .slider__imgvertical,
-.slider-two .slider__imghorizontal {
-    visibility: hidden;
-}
-
-.slider__prev {
+.main .slider .carousel .slider__prev {
     position: absolute;
     top: 50%;
     left: 50px;
     transform: translate(-50%, -50%);
 }
 
-.slider__next {
+.main .slider .carousel .slider__next {
     position: absolute;
     top: 50%;
     right: 32px;
     transform: translate(-50%, -50%);
 }
 
-.slider .slider__imgvertical {
+.main .slider .carousel .slider__content .slider__imgvertical {
     position: relative;
     margin: -7px 0 0 72px;
     width: 243px;
@@ -298,7 +320,7 @@ li:not(.active):hover {
     visibility: visible;
 }
 
-.slider .slider__imghorizontal {
+.main .slider .carousel .slider__content .slider__imghorizontal {
     position: relative;
     margin: -15px 55px 0 68px;
     width: 488px;
@@ -306,7 +328,7 @@ li:not(.active):hover {
     visibility: visible;
 }
 
-.slider .screenvertical {
+.main .slider .carousel .slider__content .screenvertical {
     position: absolute;
     opacity: 0;
     top: 67px;
@@ -314,7 +336,7 @@ li:not(.active):hover {
     transition: opacity 200ms ease-in;
 }
 
-.slider .screenhorizontal {
+.main .slider .carousel .slider__content .screenhorizontal {
     position: absolute;
     opacity: 0;
     top: 21px;
@@ -322,7 +344,7 @@ li:not(.active):hover {
     transition: opacity 200ms ease-in;
 }
 
-.slider .clearscreenv {
+.main .slider .carousel .slider__content .clearscreenv {
     position: absolute;
     opacity: 1;
     top: 67px;
@@ -330,7 +352,7 @@ li:not(.active):hover {
     transition: opacity 200ms ease-in;
 }
 
-.slider .clearscreenh {
+.main .slider .carousel .slider__content .clearscreenh {
     position: absolute;
     opacity: 1;
     top: 21px;
@@ -338,9 +360,45 @@ li:not(.active):hover {
     transition: opacity 200ms ease-in;
 }
 
-.slider .screenhorizontal:hover,
-.slider .screenvertical:hover {
+.main .slider .carousel .slider__content .screenhorizontal:hover,
+.main .slider .carousel .slider__content .screenvertical:hover {
     cursor: pointer;
+}
+
+.main .slider .carousel .slider__content .to-left {
+    animation-name: left;
+}
+
+.main .slider .carousel .slider__content .from-right {
+    animation-name: right;
+}
+
+.main .slider .carousel .slider__content .to-right {
+    animation-name: right;
+    animation-direction: reverse;
+}
+
+.main .slider .carousel .slider__content .from-left {
+    animation-name: left;
+    animation-direction: reverse;
+}
+
+@keyframes left {
+    from {
+        left: 0;
+    }
+    to {
+        left: -100%;
+    }
+}
+
+@keyframes right {
+    from {
+        left: 100%;
+    }
+    to {
+        left: 0;
+    }
 }
 
 

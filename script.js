@@ -12,7 +12,6 @@ const PORTFOLIOMENU = document.getElementById('portfoliomenu');
 const PORTFOLIOCONTENT = document.getElementById('portfoliocontent');
 let form = document.querySelector('form');
 
-
 MENU.addEventListener('click', (event) => {
     MENU.querySelectorAll('a').forEach(el => el.classList.remove('active'));
     event.target.classList.add('active');
@@ -41,14 +40,7 @@ CLOSE_BUTTON.addEventListener('click', () => {
     document.getElementById('message-block').classList.add('hidden');
 
 })
-CHEVNEXT.addEventListener('click', () => {
-    WRAPSLIDER.classList.toggle('slider');
-    WRAPSLIDER.classList.toggle('slider-two');
-})
-CHEVPREV.addEventListener('click', () => {
-    WRAPSLIDER.classList.toggle('slider');
-    WRAPSLIDER.classList.toggle('slider-two');
-})
+
 PHONEVERT.addEventListener('click', () => {
     SCREENVERTICAL.classList.toggle('clearscreenv');
     SCREENVERTICAL.classList.toggle('screenvertical');
@@ -74,3 +66,52 @@ form.onsubmit = function(evt) {
     evt.preventDefault();
     FormData.reset();
 };
+
+let items = document.querySelectorAll('.slider .carousel .slider__content .item');
+let currentItem = 0;
+let isEnabled = true;
+
+function changeCurrentItem(n) {
+    currentItem = (n + items.length) % items.length;
+}
+
+function hideItem(direction) {
+    isEnabled = false;
+    items[currentItem].classList.add(direction);
+    items[currentItem].addEventListener('animationend', function() {
+        this.classList.remove('active', direction);
+    });
+}
+
+function showItem(direction) {
+    items[currentItem].classList.add('next', direction);
+    items[currentItem].addEventListener('animationend', function() {
+        this.classList.remove('next', direction);
+        this.classList.add('active');
+        isEnabled = true;
+    });
+}
+
+function nextItem(n) {
+    hideItem('to-left');
+    changeCurrentItem(n + 1);
+    showItem('from-right');
+}
+
+function previousItem(n) {
+    hideItem('to-right');
+    changeCurrentItem(n - 1);
+    showItem('from-left');
+}
+
+CHEVPREV.addEventListener('click', function() {
+    if (isEnabled) {
+        previousItem(currentItem);
+    }
+});
+
+CHEVNEXT.addEventListener('click', function() {
+    if (isEnabled) {
+        nextItem(currentItem);
+    }
+});
