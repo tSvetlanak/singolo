@@ -12,11 +12,33 @@ const PORTFOLIOMENU = document.getElementById('portfoliomenu');
 const PORTFOLIOCONTENT = document.getElementById('portfoliocontent');
 let form = document.querySelector('form');
 
+
+/* ---------------------------scroll menu------------------ */
 MENU.addEventListener('click', (event) => {
     MENU.querySelectorAll('a').forEach(el => el.classList.remove('active'));
     event.target.classList.add('active');
-})
+});
+document.addEventListener('scroll', onscroll);
 
+function onscroll(event) {
+
+    const curPos = window.scrollY;
+    const anchor = document.getElementsByClassName('anchor');
+    const links = MENU.querySelectorAll('a')
+
+    Array.prototype.forEach.call(anchor, function(el) {
+        let elHeight = el.nextSibling.nextSibling.offsetHeight;
+        if ((el.offsetTop + 95) <= curPos && (el.offsetTop + elHeight) > curPos) {
+            links.forEach(a => {
+                a.classList.remove('active');
+                if (el.getAttribute('id') === a.getAttribute('href').substring(1)) {
+                    a.classList.add('active');
+                };
+            })
+        };
+    });
+}
+/* ----------------------submit-------------------------- */
 BUTTON.addEventListener('click', () => {
     const subjectname = document.getElementById('name').value.toString();
     const subjectemail = document.getElementById('email').value.toString();
@@ -27,7 +49,7 @@ BUTTON.addEventListener('click', () => {
     document.getElementById('resultname').innerText = subjectname;
     document.getElementById('resultemail').innerText = subjectemail;
     document.getElementById('result').innerText = subject;
-    document.getElementById('resultdescr').innerText = subjectdescr;
+    document.getElementById('resultdescr').innerText = subjectdescr.slice(0, 45);
     document.getElementById('message-block').classList.remove('hidden');
 
 })
@@ -38,7 +60,11 @@ CLOSE_BUTTON.addEventListener('click', () => {
     document.getElementById('result').innerText = '';
     document.getElementById('resultdescr').innerText = '';
     document.getElementById('message-block').classList.add('hidden');
+    form.reset();
+    form.onsubmit = function(evt) {
+        evt.preventDefault();
 
+    };
 })
 
 PHONEVERT.addEventListener('click', () => {
@@ -64,9 +90,9 @@ PORTFOLIOCONTENT.addEventListener('click', (event) => {
 
 form.onsubmit = function(evt) {
     evt.preventDefault();
-    FormData.reset();
-};
 
+};
+/* ------------------slider--------------- */
 let items = document.querySelectorAll('.slider .carousel .slider__content .item');
 let currentItem = 0;
 let isEnabled = true;

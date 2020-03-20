@@ -818,7 +818,7 @@ textarea::placeholder {
 
 .form #message-block {
     position: absolute;
-    width: 30%;
+    width: 50%;
     height: 45vh;
     top: 70px;
     left: 33%;
