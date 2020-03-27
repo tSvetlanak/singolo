@@ -10,10 +10,17 @@ const PHONEVERT = document.getElementById('blockvert');
 const PHONEHOR = document.getElementById('blockhor');
 const PORTFOLIOMENU = document.getElementById('portfoliomenu');
 const PORTFOLIOCONTENT = document.getElementById('portfoliocontent');
+const BURGER = document.getElementById('headerburger');
+const NAV = document.getElementById('headernav');
 let form = document.querySelector('form');
 
-
-/* ---------------------------scroll menu------------------ */
+/* ----------------------------burgerMenu--------------------- */
+BURGER.addEventListener('click', () => {
+        BURGER.classList.toggle('active');
+        NAV.classList.toggle('active');
+        document.body.classList.toggle('lock');
+    })
+    /* ---------------------------scroll menu------------------ */
 MENU.addEventListener('click', (event) => {
     MENU.querySelectorAll('a').forEach(el => el.classList.remove('active'));
     event.target.classList.add('active');
@@ -28,7 +35,7 @@ function onscroll(event) {
 
     Array.prototype.forEach.call(anchor, function(el) {
         let elHeight = el.nextSibling.nextSibling.offsetHeight;
-        if ((el.offsetTop + 95) <= curPos && (el.offsetTop + elHeight) > curPos) {
+        if ((el.offsetTop) <= curPos && (el.offsetTop + elHeight) > curPos) {
             links.forEach(a => {
                 a.classList.remove('active');
                 if (el.getAttribute('id') === a.getAttribute('href').substring(1)) {
