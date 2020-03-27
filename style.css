@@ -127,7 +127,7 @@ p {
 .anchor {
     display: block;
     position: relative;
-    top: 90px;
+    top: -95px;
     visibility: hidden;
 }
 
@@ -687,13 +687,6 @@ li:not(.active):hover {
 
 /* -------------------------------- */
 
-.anchor {
-    display: block;
-    position: relative;
-    top: -95px;
-    visibility: hidden;
-}
-
 .contact__wrap {
     background: #f06c64;
     overflow: hidden;
@@ -985,6 +978,12 @@ textarea::placeholder {
 }
 
 @media (max-width: 768px) {
+    .anchor {
+        display: block;
+        position: relative;
+        top: -96px;
+        visibility: hidden;
+    }
     .container {
         width: 768px;
         max-width: 768px;
@@ -1135,6 +1134,12 @@ textarea::placeholder {
 }
 
 @media (max-width: 375px) {
+    .anchor {
+        display: block;
+        position: relative;
+        top: -72px;
+        visibility: hidden;
+    }
     .container {
         width: 375px;
         max-width: 375px;
