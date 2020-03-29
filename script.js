@@ -24,6 +24,8 @@ BURGER.addEventListener('click', () => {
 MENU.addEventListener('click', (event) => {
     MENU.querySelectorAll('a').forEach(el => el.classList.remove('active'));
     event.target.classList.add('active');
+    BURGER.classList.toggle('active');
+    NAV.classList.toggle('active');
 });
 document.addEventListener('scroll', onscroll);
 
