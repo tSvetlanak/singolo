@@ -55,7 +55,7 @@ BUTTON.addEventListener('click', () => {
     subjectdescr = subjectdescr.length > 0 ? 'Описание: ' + subjectdescr : 'Без описания';
     document.getElementById('resultname').innerText = subjectname;
     document.getElementById('resultemail').innerText = subjectemail;
-    document.getElementById('result').innerText = subject;
+    document.getElementById('result').innerText = subject.slice(0, 45);
     document.getElementById('resultdescr').innerText = subjectdescr.slice(0, 45);
     document.getElementById('message-block').classList.remove('hidden');
 
