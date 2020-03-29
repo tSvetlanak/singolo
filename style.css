@@ -657,6 +657,11 @@ li:not(.active):hover {
 
 .about ul li img {
     margin: 0 0 17px 0;
+    border: 1px solid #f06c64;
+}
+
+.about .about__wrap ul li figure img {
+    border: 1px solid #f2f2f2;
 }
 
 .about ul li p {
@@ -687,6 +692,10 @@ li:not(.active):hover {
     border: 1px solid #f06c64;
     transition-duration: 0.5s;
     cursor: pointer;
+}
+
+.about .about__wrap ul li figure img:hover {
+    cursor: default;
 }
 
 .about .about__socials .socials__svg {
