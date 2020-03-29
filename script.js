@@ -85,7 +85,7 @@ PHONEHOR.addEventListener('click', () => {
 PORTFOLIOMENU.addEventListener('click', (event) => {
     PORTFOLIOMENU.querySelectorAll('a').forEach(el => el.classList.remove('active'));
     event.target.classList.add('active');
-    let img_list = PORTFOLIOCONTENT.querySelectorAll('img');
+    let img_list = PORTFOLIOCONTENT.querySelectorAll('li');
     for (let c = 0; c < img_list.length; c++) {
         img_list[img_list.length - 1].after(img_list[c]);
     }
