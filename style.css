@@ -59,7 +59,7 @@ html {
 *:after {
     margin: 0;
     padding: 0;
-    font-family: LatoBold, sans-serif;
+    /*   font-family: LatoBold, sans-serif; */
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
